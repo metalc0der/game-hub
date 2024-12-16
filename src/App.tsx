@@ -10,10 +10,10 @@ function App() {
     <GridItem area='nav'>
       <NavBar />
     </GridItem>
-    <GridItem hideBelow="lg" area='aside' bg='gold'>
+    <GridItem hideBelow="lg" area='aside'>
       Aside
     </GridItem>
-    <GridItem area='main' bg='dodgerblue'>
+    <GridItem area='main'>
       Main
      </GridItem>
   </Grid>
