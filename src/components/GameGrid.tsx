@@ -1,27 +1,9 @@
-import apiClient from '@/services/api-client';
+import useGames from '@/hooks/useGames';
 import { Text } from '@chakra-ui/react';
-import { useEffect, useState } from 'react'
-
-interface Game {
-    id: number;
-    name: string;
-    background_image: string;
-}
-
-interface FetchGamesResponse {
-    count: number;
-    results: Game[];
-}
 
 const GameGrid = () => {
-    const [ games, setGames ] = useState<Game[]>([]);
-    const [ error, setError ] = useState('');
-
-    useEffect(() => {
-        apiClient.get<FetchGamesResponse>('/games')
-            .then(response => setGames(response.data.results))
-            .catch(err => setError(err.message));
-    });
+    
+    const { games, error } = useGames();
 
   return (
     <>
