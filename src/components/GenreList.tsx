@@ -1,4 +1,4 @@
-import useGenres, { Genre } from "@/hooks/usGenres";
+import useGenres, { Genre } from "@/hooks/useGenres";
 import getCroppedImageUrl from "@/services/image-url";
 import { Button, HStack, Image, List, Spinner, Text } from "@chakra-ui/react";
 
